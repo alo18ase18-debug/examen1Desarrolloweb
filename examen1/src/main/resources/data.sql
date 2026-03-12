@@ -1,0 +1,12 @@
+MERGE INTO aeropuertos KEY(id) VALUES (1,  'Aeropuerto Internacional Felipe Ángeles',   'Ciudad de México', 'México',         'NLU');
+MERGE INTO aeropuertos KEY(id) VALUES (2,  'Aeropuerto Internacional Benito Juárez',     'Ciudad de México', 'México',         'MEX');
+MERGE INTO aeropuertos KEY(id) VALUES (3,  'Aeropuerto Internacional John F. Kennedy',   'Nueva York',       'Estados Unidos', 'JFK');
+MERGE INTO aeropuertos KEY(id) VALUES (4,  'Aeropuerto Internacional Los Ángeles',       'Los Ángeles',      'Estados Unidos', 'LAX');
+MERGE INTO aeropuertos KEY(id) VALUES (5,  'Aeropuerto Charles de Gaulle',               'París',            'Francia',        'CDG');
+MERGE INTO aeropuertos KEY(id) VALUES (6,  'Aeropuerto de Heathrow',                     'Londres',          'Reino Unido',    'LHR');
+MERGE INTO aeropuertos KEY(id) VALUES (7,  'Aeropuerto Internacional de Tokio-Narita',   'Tokio',            'Japón',          'NRT');
+MERGE INTO aeropuertos KEY(id) VALUES (8,  'Aeropuerto Internacional O Hare',            'Chicago',          'Estados Unidos', 'ORD');
+MERGE INTO aeropuertos KEY(id) VALUES (9,  'Aeropuerto Internacional de Dubai',          'Dubai',            'Emiratos Arabes','DXB');
+MERGE INTO aeropuertos KEY(id) VALUES (10, 'Aeropuerto Internacional de Sao Paulo',      'Sao Paulo',        'Brasil',         'GRU');
+MERGE INTO aeropuertos KEY(id) VALUES (11, 'Aeropuerto Internacional de Barajas',        'Madrid',           'España',         'MAD');
+MERGE INTO aeropuertos KEY(id) VALUES (12, 'Aeropuerto Internacional de Schiphol',       'Amsterdam',        'Paises Bajos',   'AMS');

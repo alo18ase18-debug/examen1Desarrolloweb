@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Aeropuerto</title>
+</head>
+<body>
+    <h1>Eliminar Aeropuerto</h1>
+
+    <p>¿Estás seguro que deseas eliminar el siguiente registro?</p>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <td th:text="${aeropuerto.id}"></td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td th:text="${aeropuerto.nombre}"></td>
+        </tr>
+        <tr>
+            <th>Ciudad</th>
+            <td th:text="${aeropuerto.ciudad}"></td>
+        </tr>
+        <tr>
+            <th>País</th>
+            <td th:text="${aeropuerto.pais}"></td>
+        </tr>
+        <tr>
+            <th>Código</th>
+            <td th:text="${aeropuerto.codigo}"></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form th:action="@{/aeropuertos/borrar/{id}(id=${aeropuerto.id})}"
+          action="/aeropuertos/borrar/1" method="post">
+        <input type="hidden" name="id" th:value="${aeropuerto.id}">
+        <input type="submit" value="Eliminar">
+        &nbsp;
+        <a th:href="@{/aeropuertos}" href="/aeropuertos">Cancelar</a>
+    </form>
+</body>
+</html>

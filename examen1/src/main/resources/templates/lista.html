@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Aeropuertos</title>
+</head>
+<body>
+    <h1>Lista de Aeropuertos</h1>
+
+    <p th:if="${mensaje}" th:text="${mensaje}"></p>
+    <p th:if="${error}" th:text="${error}"></p>
+
+    <a th:href="@{/aeropuertos/nuevo}" href="/aeropuertos/nuevo">+ Agregar aeropuerto</a>
+
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+                <th>País</th>
+                <th>Código</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="a : ${aeropuertos}">
+                <td th:text="${a.id}"></td>
+                <td th:text="${a.nombre}"></td>
+                <td th:text="${a.ciudad}"></td>
+                <td th:text="${a.pais}"></td>
+                <td th:text="${a.codigo}"></td>
+                <td>
+                    <a th:href="@{/aeropuertos/editar/{id}(id=${a.id})}">Editar</a>
+                    &nbsp;
+                    <a th:href="@{/aeropuertos/eliminar/{id}(id=${a.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <p th:if="${#lists.isEmpty(aeropuertos)}">No hay aeropuertos registrados.</p>
+</body>
+</html>
